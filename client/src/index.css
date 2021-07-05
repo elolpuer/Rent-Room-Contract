@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+details :focus {
+    outline: 0;
+}
+  /* Firefox */
+details, summary {
+  display: block;
+}
+details summary:before {
+  content: "";
+}
+details[open] summary:before {
+  content: "";
+}
