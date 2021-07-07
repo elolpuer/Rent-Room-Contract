@@ -27,6 +27,10 @@ contract Rent {
         return address(this).balance;
     }
 
+    function getAnotherBalance(address _addr) public view returns(uint) {
+        return _addr.balance;
+    }
+
     event SellRoom (address payable _owner, uint _price);
     event RentRoom (address payable _owner, address payable _rentOwner, uint _id,uint _timeDeal, uint _timeRentEnded,uint _price);
     event CloseRoomOwnerForever(address payable _owner, uint _id);
@@ -116,8 +120,11 @@ contract Rent {
         emit CloseRoomOwnerFromThisRenter(payable(msg.sender), _id);
     }
 
+    function getDeposit(uint _id) public view returns(uint){
+        return deposit[_id];
+    }
     //Меняем ключи
-    function changeKey(uint _id, uint _newKey) public{
+    function changeKey(uint _id, uint _newKey) public {
         require(msg.sender == rooms[_id].Owner, 'Sender should be owner');
         keys[_id] = _newKey;
         emit ChangeKey(_id);

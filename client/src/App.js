@@ -43,7 +43,7 @@ class App extends Component {
         deployedNetwork && deployedNetwork.address,
       );
 
-      instance.options.address = '0xe5582A3a6f8cDb47AE024770B3B36CE74296F404'
+      instance.options.address = '0xb1968c7Bb78c4Ca90Ce3CF8c01E13e2D720500a7'
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
@@ -108,7 +108,7 @@ class App extends Component {
     const amountDaysToEndDeal = (timeRentEnded - timeDeal)/ 60 / 60 / 24
     //Сумма ежедневного платежа
     //Нужна чтобы посчитать общую сумму платежа
-    const daysPrice = parseInt(monthPrice / 30)
+    const daysPrice = parseFloat(monthPrice / 30)
     await contract.methods.closeRoomOwnerForever(id).send({from:accounts[0], value: daysPrice*amountDaysToEndDeal})
   }
 
