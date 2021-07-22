@@ -45,7 +45,7 @@ class Add extends React.Component {
                 <span>Name</span><input value={this.state.name} onChange={this.handleTextName} required/><br/>
                 <span>Description</span><input value={this.state.description} onChange={this.handleTextDescription} required/><br/>
                 <span>Key</span><input value={this.state.key} onChange={this.handleKey} required/><br/>
-                <span>Month Price в Wei</span><input placeholder="Стоимость" value={this.state.price} onChange={this.handlePrice} required/>
+                <span>Month Price Wei</span><input placeholder="Стоимость" value={this.state.price} onChange={this.handlePrice} required/>
                 <span>ETH:{this.state.price/1000000000000000000}</span>
                 <br/>
                 <button className="btn btn-success" type="submit">Rent Out</button>

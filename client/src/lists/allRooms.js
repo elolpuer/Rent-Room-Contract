@@ -37,7 +37,7 @@ class AllRooms extends React.Component {
                                         <p>RentOwner:{room.RentOwner}</p>	
                                         <p>Price: {room.Price}</p>
                                         <p>Deposit = 1 monthPrice, that means to all amount + 1 monthPrice (will come back to you after closing room)</p>
-                                        <span>Количество месяцев</span><input placeholder="Количество месяцев" value={this.state.monthRent} onChange={this.changeMonthRent} required/>
+                                        <span>Month</span><input placeholder="Количество месяцев" value={this.state.monthRent} onChange={this.changeMonthRent} required/>
                                         <button className="btn btn-success" type="submit">Rent</button>
                                         <hr/>
                                         </form>

@@ -43,7 +43,7 @@ class App extends Component {
         deployedNetwork && deployedNetwork.address,
       );
 
-      instance.options.address = '0xb1968c7Bb78c4Ca90Ce3CF8c01E13e2D720500a7'
+      instance.options.address = '0x08C5822Dd7F93a4aC5Ff0BeE0931318b36055F9C'
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
